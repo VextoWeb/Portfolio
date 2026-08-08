@@ -663,86 +663,61 @@ content="assets/images/preview.jpg">
             <label>Rodzaj strony</label>
 
             <select id="websiteType">
+    <option value="1800">One Page (wizytówka / Landing Page)</option>
+    <option value="2800">Strona firmowa (wielostronicowa)</option>
+    <option value="4800">Sklep internetowy (E-commerce)</option>
+</select>
 
-                <option value="2500">One Page</option>
-                <option value="4500">Strona firmowa</option>
-                <option value="9000">Sklep internetowy</option>
+<label>Liczba podstron (dla stron wielostronicowych)</label>
 
-            </select>
+<input
+    type="range"
+    id="pages"
+    min="0"
+    max="15"
+    value="3">
 
-            <label>Liczba podstron</label>
+<p>
+    Liczba podstron:
+    <span id="pagesValue">3</span>
+</p>
 
-            <input
-                type="range"
-                id="pages"
-                min="1"
-                max="20"
-                value="5">
+<h3>Dodatkowe usługi</h3>
 
-            <p>
+<label>
+    <input class="extra" type="checkbox" value="250">
+    Formularz kontaktowy / rezerwacyjny
+</label>
 
-                Liczba podstron:
-                <span id="pagesValue">5</span>
+<label>
+    <input class="extra" type="checkbox" value="500">
+    Podstawowe SEO (optymalizacja pod Google)
+</label>
 
-            </p>
+<label>
+    <input class="extra" type="checkbox" value="600">
+    Moduł Blog / Aktualności
+</label>
 
-            <h3>Dodatkowe usługi</h3>
+<label>
+    <input class="extra" type="checkbox" value="500">
+    Wielojęzyczność (dodatkowy język)
+</label>
 
-            <label>
+<label>
+    <input class="extra" type="checkbox" value="300">
+    Konfiguracja hostingu + certyfikat SSL
+</label>
 
-                <input class="extra" type="checkbox" value="500">
+<label>
+    <input class="extra" type="checkbox" value="350">
+    Opieka techniczna (wsparcie na start)
+</label>
 
-                Formularz kontaktowy
-
-            </label>
-
-            <label>
-
-                <input class="extra" type="checkbox" value="700">
-
-                SEO
-
-            </label>
-
-            <label>
-
-                <input class="extra" type="checkbox" value="1200">
-
-                Blog
-
-            </label>
-
-            <label>
-
-                <input class="extra" type="checkbox" value="900">
-
-                Wielojęzyczność
-
-            </label>
-
-            <label>
-
-                <input class="extra" type="checkbox" value="600">
-
-                Hosting + SSL
-
-            </label>
-
-            <label>
-
-                <input class="extra" type="checkbox" value="400">
-
-                Opieka techniczna
-
-            </label>
-
-            <label>
-
-                <input class="extra" type="checkbox" value="900">
-
-                Copywriting
-
-            </label>
+<label>
+    <input class="extra" type="checkbox" value="450">
+    Copywriting (przygotowanie treści)
+</label>
 
             <div class="price-result">
 

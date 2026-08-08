@@ -174,29 +174,32 @@ const summary = document.getElementById("summary");
 function calculatePrice(){
 
     let total = Number(websiteType.value);
-
+    let extraPagesCost = 0;
     let html = "";
 
     pagesValue.textContent = pages.value;
 
-    total += Number(pages.value) * 200;
+    // Przeliczanie kosztu podstron (dla One Page koszt wynosi 0 zł za podstrony)
+    if(websiteType.options[websiteType.selectedIndex].text.includes("One Page")) {
+        extraPagesCost = 0;
+    } else {
+        extraPagesCost = Number(pages.value) * 150; // 150 zł za każdą podstronę
+    }
 
-    html += `<p>Podstrony: ${pages.value}</p>`;
+    total += extraPagesCost;
 
-    extras.forEach(extra=>{
+    if(extraPagesCost > 0) {
+        html += `<p>Dodatkowe podstrony (${pages.value}): +${extraPagesCost} zł</p>`;
+    }
 
+    extras.forEach(extra => {
         if(extra.checked){
-
             total += Number(extra.value);
-
             html += `<p>✔ ${extra.parentElement.textContent.trim()}</p>`;
-
         }
-
     });
 
-    price.textContent = total.toLocaleString("pl-PL")+" zł";
-
+    price.textContent = total.toLocaleString("pl-PL") + " zł";
     summary.innerHTML = html;
 
 }
