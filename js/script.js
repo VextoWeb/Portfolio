@@ -115,7 +115,7 @@ menuLinks.forEach(link=>{
 const form = document.getElementById("contactForm");
 const message = document.getElementById("formMessage");
 
-form.addEventListener("submit", function(e){
+form?.addEventListener("submit", function(e){
 
     const name = form.name.value.trim();
     const email = form.email.value.trim();
@@ -163,19 +163,6 @@ faqItems.forEach(item => {
 });
 
 
-const statsSection = document.querySelector(".stats");
-
-const statsObserver = new IntersectionObserver(entries => {
-
-    if(entries[0].isIntersecting){
-
-        startCounters();
-
-        statsObserver.disconnect();
-
-    }
-
-});
 
 const websiteType = document.getElementById("websiteType");
 const pages = document.getElementById("pages");
@@ -214,9 +201,9 @@ function calculatePrice(){
 
 }
 
-websiteType.addEventListener("change",calculatePrice);
+websiteType?.addEventListener("change",calculatePrice);
 
-pages.addEventListener("input",calculatePrice);
+pages?.addEventListener("input",calculatePrice);
 
 extras.forEach(extra=>{
 
@@ -290,7 +277,7 @@ if(savedTheme === "light"){
 
 }
 
-themeToggle.addEventListener("click",()=>{
+themeToggle?.addEventListener("click",()=>{
 
     document.body.classList.toggle("light");
 
