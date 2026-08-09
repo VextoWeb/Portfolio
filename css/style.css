@@ -914,6 +914,78 @@ body{
     }
 }
 
+/* =========================================
+   MOBILE - FIX OVERFLOW
+========================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        box-sizing: border-box;
+    }
+
+    /* FORMULARZ */
+
+    .contactForm,
+    form.contactForm {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    .contactForm input,
+    .contactForm textarea,
+    .contactForm button {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .contactForm textarea {
+        resize: vertical;
+    }
+
+    /* STATYSTYKI */
+
+    .stat-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .stat-card * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 /* ===========================
    SCROLL ANIMATIONS
 =========================== */
